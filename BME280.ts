@@ -123,7 +123,7 @@ namespace BME280 {
     export function pressure(u: BME280_P): number {
         get();
         if (u == BME280_P.Pa) return P;
-        else return Math.idiv(P / 10) / 10
+        else return Math.round(P / 10) / 10
     }
 
     /**
